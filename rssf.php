@@ -1,5 +1,5 @@
 <?php
-    $rssf= '<?xml version="1.0" encoding="UTF-8"?>';
+    $rssf = '<?xml version="1.0" encoding="UTF-8"?>';
     $rssf .= '<rss version="2.0">';
     $rssf .= '<channel>';
 
@@ -7,14 +7,14 @@
     $sql = "SELECT * FROM tblmusic;";
     $q = mysqli_query($con, $sql) or die (mysqli_error($con));
 
-    while($row= mysqli_fetch_assoc($q)){
-        extract($row);
+    while($r= mysqli_fetch_assoc($q)){
+        extract($r);
         
         $rssf .= '<music>';
-        $rssf .= '<title>' . $mus_title . '</title>';
-        $rssf .= '<artist>' . $mus_artist . '</artist>';
-        $rssf .= '<genre>' . $mus_genre . '</genre>';
-        $rssf .= '<writer>' . $mus_writer . '</writer>';
+        $rssf .= '<mus_title>' . $mus_title . '</mus_title>';
+        $rssf .= '<mus_artist>' . $mus_artist . '</mus_artist>';
+        $rssf .= '<mus_genre>' . $mus_genre . '</mus_genre>';
+        $rssf .= '<mus_writer>' . $mus_writer . '</mus_writer>';
         $rssf .= '</music>';
     }
     $rssf .= '</channel>';
