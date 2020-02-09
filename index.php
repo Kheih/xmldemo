@@ -1,6 +1,6 @@
 <?php
  $domOBJ = new DOMDocument();
- $domOBJ->load("https://newapp-faus.herokuapp.com/rss.php");//XML page URL
+ $domOBJ->load("https://newapp-faus.herokuapp.com/rssf.php");//XML page URL
  
  $content = $domOBJ->getElementsByTagName("music");
  ?>
