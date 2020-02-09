@@ -10,16 +10,16 @@
  <?php
  foreach( $content as $data )
  {
-     $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
-     $artist = $data->getElementsByTagName("artist")->item(0)->nodeValue;
-     $genre = $data->getElementsByTagName("genre")->item(0)->nodeValue;
-     $writer = $data->getElementsByTagName("writer")->item(0)->nodeValue;
+     $mus_title = $data->getElementsByTagName("mus_title")->item(0)->nodeValue;
+     $mus_artist = $data->getElementsByTagName("mus_artist")->item(0)->nodeValue;
+     $mus_genre = $data->getElementsByTagName("mus_genre")->item(0)->nodeValue;
+     $mus_writer = $data->getElementsByTagName("mus_writer")->item(0)->nodeValue;
      echo "<ul>
             <h2>$title</h2>
               <ul>
-                  <li>Artist: $artist </li>
-                  <li>Genre: $genre </li>
-                  <li>Writer: $writer </li>
+                  <li>Artist: $mus_artist </li>
+                  <li>Genre: $mus_genre </li>
+                  <li>Writer: $mus_writer </li>
               </ul>
           </ul>";
  }
