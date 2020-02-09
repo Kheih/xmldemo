@@ -5,15 +5,15 @@
  $content = $domOBJ->getElementsByTagName("music");
  ?>
 
- <h1>Articles</h1>
+ <h1>Music</h1>
 
  <?php
  foreach( $content as $data )
  {
      $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
-     $description = $data->getElementsByTagName("artist")->item(0)->nodeValue;
-     $author = $data->getElementsByTagName("genre")->item(0)->nodeValue;
-     $created = $data->getElementsByTagName("writer")->item(0)->nodeValue;
+     $artist = $data->getElementsByTagName("artist")->item(0)->nodeValue;
+     $genre = $data->getElementsByTagName("genre")->item(0)->nodeValue;
+     $writer = $data->getElementsByTagName("writer")->item(0)->nodeValue;
      echo "<ul>
             <h2>$title</h2>
               <ul>
