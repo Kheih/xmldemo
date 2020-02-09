@@ -7,7 +7,7 @@
     $sql = "SELECT * FROM tblmusic;";
     $q = mysqli_query($con, $sql) or die (mysqli_error($con));
 
-    while($row= mysqli_fetch_assoc($query)){
+    while($row= mysqli_fetch_assoc($q)){
         extract($row);
         
         $rssf .= '<music>';
